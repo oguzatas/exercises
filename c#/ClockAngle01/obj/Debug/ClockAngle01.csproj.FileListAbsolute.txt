@@ -1,0 +1,11 @@
+C:\Users\serqu\OneDrive\Masaüstü\workspace\exercises\C#\ClockAngle01\bin\Debug\ClockAngle01.exe.config
+C:\Users\serqu\OneDrive\Masaüstü\workspace\exercises\C#\ClockAngle01\bin\Debug\ClockAngle01.exe
+C:\Users\serqu\OneDrive\Masaüstü\workspace\exercises\C#\ClockAngle01\bin\Debug\ClockAngle01.pdb
+C:\Users\serqu\OneDrive\Masaüstü\workspace\exercises\C#\ClockAngle01\obj\Debug\ClockAngle01.csproj.AssemblyReference.cache
+C:\Users\serqu\OneDrive\Masaüstü\workspace\exercises\C#\ClockAngle01\obj\Debug\ClockAngle01.Form1.resources
+C:\Users\serqu\OneDrive\Masaüstü\workspace\exercises\C#\ClockAngle01\obj\Debug\ClockAngle01.Properties.Resources.resources
+C:\Users\serqu\OneDrive\Masaüstü\workspace\exercises\C#\ClockAngle01\obj\Debug\ClockAngle01.csproj.GenerateResource.cache
+C:\Users\serqu\OneDrive\Masaüstü\workspace\exercises\C#\ClockAngle01\obj\Debug\ClockAngle01.csproj.CoreCompileInputs.cache
+C:\Users\serqu\OneDrive\Masaüstü\workspace\exercises\C#\ClockAngle01\obj\Debug\ClockAngle01.exe
+C:\Users\serqu\OneDrive\Masaüstü\workspace\exercises\C#\ClockAngle01\obj\Debug\ClockAngle01.pdb
+C:\Users\serqu\OneDrive\Masaüstü\workspace\exercises\C#\ClockAngle01\obj\Debug\ClockAngle01.csproj.SuggestedBindingRedirects.cache

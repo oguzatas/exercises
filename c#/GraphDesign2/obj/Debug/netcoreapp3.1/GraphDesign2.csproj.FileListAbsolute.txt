@@ -1,0 +1,16 @@
+C:\Users\serqu\OneDrive\Masaüstü\workspace\exercises\C#\GraphDesign2\bin\Debug\netcoreapp3.1\GraphDesign2.exe
+C:\Users\serqu\OneDrive\Masaüstü\workspace\exercises\C#\GraphDesign2\bin\Debug\netcoreapp3.1\GraphDesign2.deps.json
+C:\Users\serqu\OneDrive\Masaüstü\workspace\exercises\C#\GraphDesign2\bin\Debug\netcoreapp3.1\GraphDesign2.runtimeconfig.json
+C:\Users\serqu\OneDrive\Masaüstü\workspace\exercises\C#\GraphDesign2\bin\Debug\netcoreapp3.1\GraphDesign2.runtimeconfig.dev.json
+C:\Users\serqu\OneDrive\Masaüstü\workspace\exercises\C#\GraphDesign2\bin\Debug\netcoreapp3.1\GraphDesign2.dll
+C:\Users\serqu\OneDrive\Masaüstü\workspace\exercises\C#\GraphDesign2\bin\Debug\netcoreapp3.1\GraphDesign2.pdb
+C:\Users\serqu\OneDrive\Masaüstü\workspace\exercises\C#\GraphDesign2\obj\Debug\netcoreapp3.1\GraphDesign2.csproj.AssemblyReference.cache
+C:\Users\serqu\OneDrive\Masaüstü\workspace\exercises\C#\GraphDesign2\obj\Debug\netcoreapp3.1\GraphDesign2.Form1.resources
+C:\Users\serqu\OneDrive\Masaüstü\workspace\exercises\C#\GraphDesign2\obj\Debug\netcoreapp3.1\GraphDesign2.csproj.GenerateResource.cache
+C:\Users\serqu\OneDrive\Masaüstü\workspace\exercises\C#\GraphDesign2\obj\Debug\netcoreapp3.1\GraphDesign2.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\serqu\OneDrive\Masaüstü\workspace\exercises\C#\GraphDesign2\obj\Debug\netcoreapp3.1\GraphDesign2.AssemblyInfoInputs.cache
+C:\Users\serqu\OneDrive\Masaüstü\workspace\exercises\C#\GraphDesign2\obj\Debug\netcoreapp3.1\GraphDesign2.AssemblyInfo.cs
+C:\Users\serqu\OneDrive\Masaüstü\workspace\exercises\C#\GraphDesign2\obj\Debug\netcoreapp3.1\GraphDesign2.csproj.CoreCompileInputs.cache
+C:\Users\serqu\OneDrive\Masaüstü\workspace\exercises\C#\GraphDesign2\obj\Debug\netcoreapp3.1\GraphDesign2.dll
+C:\Users\serqu\OneDrive\Masaüstü\workspace\exercises\C#\GraphDesign2\obj\Debug\netcoreapp3.1\GraphDesign2.pdb
+C:\Users\serqu\OneDrive\Masaüstü\workspace\exercises\C#\GraphDesign2\obj\Debug\netcoreapp3.1\GraphDesign2.genruntimeconfig.cache
