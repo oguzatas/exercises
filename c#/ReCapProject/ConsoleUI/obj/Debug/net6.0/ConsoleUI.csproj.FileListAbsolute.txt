@@ -1,0 +1,5 @@
+C:\Users\serqu\OneDrive\Masaüstü\workspace2\exercises\c#\ReCapProject\ConsoleUI\obj\Debug\net6.0\ConsoleUI.csproj.AssemblyReference.cache
+C:\Users\serqu\OneDrive\Masaüstü\workspace2\exercises\c#\ReCapProject\ConsoleUI\obj\Debug\net6.0\ConsoleUI.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\serqu\OneDrive\Masaüstü\workspace2\exercises\c#\ReCapProject\ConsoleUI\obj\Debug\net6.0\ConsoleUI.AssemblyInfoInputs.cache
+C:\Users\serqu\OneDrive\Masaüstü\workspace2\exercises\c#\ReCapProject\ConsoleUI\obj\Debug\net6.0\ConsoleUI.AssemblyInfo.cs
+C:\Users\serqu\OneDrive\Masaüstü\workspace2\exercises\c#\ReCapProject\ConsoleUI\obj\Debug\net6.0\ConsoleUI.csproj.CoreCompileInputs.cache
