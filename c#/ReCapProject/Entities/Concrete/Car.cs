@@ -7,14 +7,19 @@ using System.Threading.Tasks;
 
 namespace Entities.Concrete
 {
-    public class Car : IEntityCar
+    public class Car : IEntity
     {
-        public int Id { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public int BrandId { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public int ColorId { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public int ModelYear { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public int DailyPrice { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public string Description { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public int Id { get; set; }
+
+        public int BrandId { get; set; }
+
+        public int ColorId { get; set; }
+
+        public int ModelYear { get; set; }
+
+        public int DailyPrice { get; set; }
+
+        public string Description { get; set; }
 
 
     }
