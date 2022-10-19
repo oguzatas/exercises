@@ -25,13 +25,44 @@ namespace WebAPI.Controllers
                                                  you can.*/
         }
 
-        [HttpGet]
-        public List<Product> Get()
+        [HttpGet("getall")]
+        public IActionResult Get()
         {
             //Dependency chain , bad code -- to fix this, make constructor injection
             //IProductService productService = new ProductManager(new EfProductDal());
-            var result = productService.GetAll();
-            return result.Data;
+            var result = _productService.GetAll();
+            if (result.Success)
+            {
+                return Ok(result.Data);
+            }
+            return BadRequest(result.Message);
         }
+
+        [HttpGet("getbyid")]
+
+        public IActionResult Get(int id)
+        {
+            var result = _productService.GetById(id);
+            if (result.Success)
+            {
+                return Ok(result);
+            }
+            return BadRequest(result);
+        }
+
+
+        [HttpPost("add")]
+
+        public IActionResult Add(Product product)
+        {
+            var result = _productService.Add(product);
+            if (result.Success)
+            {
+                return Ok(result);
+            }
+            return BadRequest(result);
+        }
+
+        
     }
 }
