@@ -27,4 +27,11 @@ public class Employee {
     public void setAge(int age) {
         this.age = age;
     }
+
+    public void printEmployee()
+    {
+        getAge();
+        getDesignation();
+        getSalary();
+    }
 }
