@@ -11,6 +11,7 @@ using System.Threading.Tasks;
 
 namespace Business.DependencyResolvers.Autofac
 {
+    //we use dependency resolvers doc, when needed to change IoC provider, (now using Autofac) it is easier to implement 
     public class AutofacBusinessModule : Module
     {
         protected override void Load(ContainerBuilder builder)

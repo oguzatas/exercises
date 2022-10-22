@@ -1,10 +1,12 @@
 ﻿using Business.Abstract;
 using Business.Constants;
+using Business.ValidationRules.FluentValidation;
 using Core.Utilities.Results;
 using DataAccess.Abstract;
 using DataAccess.Concrete.InMemory;
 using Entities.Concrete;
 using Entities.DTOs;
+using FluentValidation;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -34,7 +36,7 @@ namespace Business.Concrete
 
             // has permission??
 
-            //if(DateTime.Now.Hour==22)
+            //if(DateTime.Now.Hour==22) // => business code to create a maintenance time on system
             //{
             //    return new ErrorDataResult<List<Product>>(Messages.MaintenanceTime);
             //}
@@ -57,12 +59,17 @@ namespace Business.Concrete
         public IResult Add(Product product)
         {
             //business codes
+            //validation
 
-            if (product.ProductName.Length<2)
+            var context = new ValidationContext<Product>(product);
+            ProductValidator productValidator = new ProductValidator();
+            var result = productValidator.Validate(context);
+            if (!result.IsValid)
             {
-                //magic strings
-                return new ErrorResult(Messages.ProductNameInvalid);
+                throw new ValidationException(result.Errors);
             }
+
+            //no-if business codes here we use fluentvalidation to manage business codes
             
             _productDal.Add(product);
 
