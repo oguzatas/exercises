@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "KS+yzul08/BQuIVbiFU75iauWfxT+OupsoibK+kp0aJauQEvo9VMGTA2emO0lrOmxRP2IF6Fe5r6H8/s7YqZGg==",
+  "dgSpecHash": "+drbq8EwfXVEiEejXmzXGIgup6WY6YtN0Bk08Xr1Wfsp4SysLBvrSMhT8oqfXEA/DQsuHU4fy5sZkTI4fEz0jw==",
   "success": true,
   "projectFilePath": "C:\\Users\\serqu\\OneDrive\\Masaüstü\\workspace2\\exercises\\c#\\Classic Architecture\\Classic\\Business\\Business.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\serqu\\.nuget\\packages\\autofac\\6.4.0\\autofac.6.4.0.nupkg.sha512",
+    "C:\\Users\\serqu\\.nuget\\packages\\autofac.extensions.dependencyinjection\\8.0.0\\autofac.extensions.dependencyinjection.8.0.0.nupkg.sha512",
     "C:\\Users\\serqu\\.nuget\\packages\\autofac.extras.dynamicproxy\\6.0.1\\autofac.extras.dynamicproxy.6.0.1.nupkg.sha512",
     "C:\\Users\\serqu\\.nuget\\packages\\castle.core\\4.4.0\\castle.core.4.4.0.nupkg.sha512",
     "C:\\Users\\serqu\\.nuget\\packages\\fluentvalidation\\11.2.2\\fluentvalidation.11.2.2.nupkg.sha512",
