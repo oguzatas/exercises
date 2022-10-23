@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "S7fRzVA2nOxfryZ+QWjNIVLtcmitTVnjBMPZNFI0S4PIw+NC8uXrq+98Kh50r6T+DYqUS2FDv6NqS5P1nl17fw==",
+  "dgSpecHash": "vRz9HCKWtsoEIjlzQ+sfqd5HTYV49Gt6b/tyHpLVZtdJRgNGPmwda73ZtWcdFqTh30bZ13r/MlsFXk384AYsOQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\serqu\\OneDrive\\Masaüstü\\workspace2\\exercises\\c#\\Classic Architecture\\Classic\\WebAPI\\WebAPI.csproj",
   "expectedPackageFiles": [
@@ -8,6 +8,7 @@
     "C:\\Users\\serqu\\.nuget\\packages\\autofac.extensions.dependencyinjection\\8.0.0\\autofac.extensions.dependencyinjection.8.0.0.nupkg.sha512",
     "C:\\Users\\serqu\\.nuget\\packages\\autofac.extras.dynamicproxy\\6.0.1\\autofac.extras.dynamicproxy.6.0.1.nupkg.sha512",
     "C:\\Users\\serqu\\.nuget\\packages\\castle.core\\4.4.0\\castle.core.4.4.0.nupkg.sha512",
+    "C:\\Users\\serqu\\.nuget\\packages\\fluentvalidation\\11.2.2\\fluentvalidation.11.2.2.nupkg.sha512",
     "C:\\Users\\serqu\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\serqu\\.nuget\\packages\\microsoft.data.sqlclient\\2.1.4\\microsoft.data.sqlclient.2.1.4.nupkg.sha512",
     "C:\\Users\\serqu\\.nuget\\packages\\microsoft.data.sqlclient.sni.runtime\\2.1.1\\microsoft.data.sqlclient.sni.runtime.2.1.1.nupkg.sha512",

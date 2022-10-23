@@ -61,13 +61,8 @@ namespace Business.Concrete
             //business codes
             //validation
 
-            var context = new ValidationContext<Product>(product);
-            ProductValidator productValidator = new ProductValidator();
-            var result = productValidator.Validate(context);
-            if (!result.IsValid)
-            {
-                throw new ValidationException(result.Errors);
-            }
+            
+            ValidationTool.Validate(new ProductValidator(),product);
 
             //no-if business codes here we use fluentvalidation to manage business codes
             

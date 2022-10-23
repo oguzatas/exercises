@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "cL3Acn1Wlv8SlbXAS2DrWJICPMrfUhTQGV/9xTBk0E/Nebe7nJ4r/O6bwjDG/UAS5ccymdAPqmpF8IrJkhyRtw==",
+  "dgSpecHash": "cC8NSI3pMO8fkws5yFJNkZWrZ5gECHfbtxlyVIfFKONtZ9dQcuj7YVQq6faTa+3QDIddc9lrot1r4QPtp/mDkQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\serqu\\OneDrive\\Masaüstü\\workspace2\\exercises\\c#\\Classic Architecture\\Classic\\Core\\Core.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\serqu\\.nuget\\packages\\fluentvalidation\\11.2.2\\fluentvalidation.11.2.2.nupkg.sha512",
     "C:\\Users\\serqu\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\serqu\\.nuget\\packages\\microsoft.data.sqlclient\\2.1.4\\microsoft.data.sqlclient.2.1.4.nupkg.sha512",
     "C:\\Users\\serqu\\.nuget\\packages\\microsoft.data.sqlclient.sni.runtime\\2.1.1\\microsoft.data.sqlclient.sni.runtime.2.1.1.nupkg.sha512",
