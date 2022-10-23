@@ -1,6 +1,7 @@
 ﻿using Business.Abstract;
 using Business.Constants;
 using Business.ValidationRules.FluentValidation;
+using Core.CrossCuttingConcerns.Validation;
 using Core.Utilities.Results;
 using DataAccess.Abstract;
 using DataAccess.Concrete.InMemory;
@@ -56,13 +57,23 @@ namespace Business.Concrete
                 (_productDal.GetAll(p => p.UnitPrice>=min && p.UnitPrice<=max));
         }
 
+        [ValidationAspect(typeof(ProductValidator))]
         public IResult Add(Product product)
         {
             //business codes
-            //validation
-
             
-            ValidationTool.Validate(new ProductValidator(),product);
+            
+            //validation
+            //bad code--- REFACTORED ---
+           // ValidationTool.Validate(new ProductValidator(),product); //Validation tool is used, so we can change tech beyond it
+
+            //log
+            //cache
+            //performance
+            //transaction
+            //permission
+
+            //Interception => the art of not putting try catch everywhere :)
 
             //no-if business codes here we use fluentvalidation to manage business codes
             
