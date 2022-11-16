@@ -1,4 +1,5 @@
 ﻿using Business.Abstract;
+using Entities.Concrete;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,5 +10,14 @@ namespace Business.Concrete
 {
     public class BrandManager : IBrandService
     {
+        public List<Brand> GetAll()
+        {
+            throw new NotImplementedException();
+        }
+
+        public Brand GetById(int BrandId)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
