@@ -1,4 +1,5 @@
 ﻿using Business.Abstract;
+using Business.CCS;
 using Business.Constants;
 using Business.ValidationRules.FluentValidation;
 using Core.Aspects.Autofac.Validation;
@@ -9,21 +10,25 @@ using DataAccess.Concrete.InMemory;
 using Entities.Concrete;
 using Entities.DTOs;
 using FluentValidation;
+using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using ILogger = Business.CCS.ILogger;
 
 namespace Business.Concrete
 {
     public class ProductManager : IProductService
     {
         IProductDal _productDal;
+        ILogger _logger;
 
-        public ProductManager(IProductDal productDal)
+        public ProductManager(IProductDal productDal, ILogger logger)
         {
             _productDal = productDal;
+            _logger = logger;
         }
 
         public IDataResult<List<ProductDetailDto>> GetProductDetails()
@@ -57,17 +62,18 @@ namespace Business.Concrete
             return new SuccessDataResult<List<Product>>
                 (_productDal.GetAll(p => p.UnitPrice>=min && p.UnitPrice<=max));
         }
-
+        
         [ValidationAspect(typeof(ProductValidator))]
         public IResult Add(Product product)
         {
             //business codes
-            
-            
+
+
             //validation
             //bad code--- REFACTORED ---
-           // ValidationTool.Validate(new ProductValidator(),product); //Validation tool is used, so we can change tech beyond it
+            // ValidationTool.Validate(new ProductValidator(),product); //Validation tool is used, so we can change tech beyond it
 
+            //CROSS CUTTING CONCERNS (CCC) => intersection point of layers in this arch
             //log
             //cache
             //performance
@@ -77,10 +83,19 @@ namespace Business.Concrete
             //Interception => the art of not putting try catch everywhere :)
 
             //no-if business codes here we use fluentvalidation to manage business codes
-            
-            _productDal.Add(product);
 
-            return new SuccessResult(Messages.ProductAdded);
+            
+           
+                
+                _productDal.Add(product);
+                
+            
+                return new SuccessResult(Messages.ProductAdded);
+
+
+
+
+
         }
 
         public IDataResult<Product> GetById(int productId)
