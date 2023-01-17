@@ -1,0 +1,31 @@
+nav .navbar {
+    list-style-type: none;
+    margin: 0px;
+    padding: 0;
+    overflow: hidden;
+    background-color: #03045e;
+    
+    
+  }
+nav .navbar li { 
+    display: inline;    
+    
+}
+
+nav .navbar li a {
+    display: inline;
+    color: whitesmoke;
+    text-align: center;
+    padding: 15px 14px;
+    text-decoration: none;
+        
+}
+nav .navbar-pages {
+    display: inline-block;
+    
+}
+
+nav li a:hover {
+    background-color: #023e8a;
+}
+/* TO BE CONTINUED */
