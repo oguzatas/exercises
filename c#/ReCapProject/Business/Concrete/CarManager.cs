@@ -14,22 +14,22 @@ namespace Business.Concrete
         ICarDal _carDal;
         public Car Add(Car car)
         {
-            throw new NotImplementedException();
+            return new Car();
         }
 
         public List<Car> GetAll()
         {
-            throw new NotImplementedException();
+            return new List<Car>(_carDal.GetAll());
         }
 
-        public List<Car> GetAllByBrandId(int id)
+        public List<Car> GetAllByBrandId(int brandId)
         {
-            throw new NotImplementedException();
+            return new List<Car>(_carDal.GetAll(p => p.BrandId == brandId));    
         }
 
         public List<Car> GetByDailyPrice(decimal min, decimal max)
         {
-            throw new NotImplementedException();
+            return new List<Car>(_carDal.GetAll(p=> p.DailyPrice == min && p.DailyPrice < max));
         }
     }
 }

@@ -4,6 +4,7 @@ using Business.Constants;
 using Business.ValidationRules.FluentValidation;
 using Core.Aspects.Autofac.Validation;
 using Core.CrossCuttingConcerns.Validation;
+using Core.Utilities.Business;
 using Core.Utilities.Results;
 using DataAccess.Abstract;
 using DataAccess.Concrete.InMemory;
@@ -23,13 +24,19 @@ namespace Business.Concrete
     public class ProductManager : IProductService
     {
         IProductDal _productDal;
-        ILogger _logger;
+        ICategoryService _categoryService;
 
-        public ProductManager(IProductDal productDal, ILogger logger)
+        public ProductManager(IProductDal productDal,ICategoryService categoryService)
         {
             _productDal = productDal;
-            _logger = logger;
+            //_categoryDal = categoryDal; // Bir Entity manager kendi Dal'ı haricinde başka bir
+            // field'ı injeckte edemez.
+
+            // Onun yerine direkt olarak servis injekte edilmelidir.
+
+            _categoryService = categoryService;
         }
+        
 
         public IDataResult<List<ProductDetailDto>> GetProductDetails()
         {
@@ -62,11 +69,13 @@ namespace Business.Concrete
             return new SuccessDataResult<List<Product>>
                 (_productDal.GetAll(p => p.UnitPrice>=min && p.UnitPrice<=max));
         }
-        
+
+        //Claim => yetki  
+        [SecuredOperation("product.add,admin")]
         [ValidationAspect(typeof(ProductValidator))]
         public IResult Add(Product product)
         {
-            //business codes
+
 
 
             //validation
@@ -84,13 +93,33 @@ namespace Business.Concrete
 
             //no-if business codes here we use fluentvalidation to manage business codes
 
-            
+            ///////////////////////////////business codes/////////////////////
+
+
+            IResult result = BusinessRules.Run(CheckIfProductNameUsed(product.ProductName),
+                CheckIfProductCountOfCategoryCorrect(product.CategoryId),
+                CheckIfCategoryLimitExceded());
            
-                
-                _productDal.Add(product);
-                
-            
-                return new SuccessResult(Messages.ProductAdded);
+            if(result != null)
+            {
+                return result;
+            }
+            return new ErrorResult();
+
+            ///////////
+            ///NOT using nested if to write logic, instead we use a engine to improve readability
+            ///
+            ///DON'T WRITE LIKE THIS !!
+            //if(CheckIfProductCountOfCategoryCorrect(product.CategoryId).Success)
+            //{
+            //    if(CheckIfProductNameUsed(product.ProductName).Success)
+            //    {
+            //        _productDal.Add(product);
+
+            //        return new SuccessResult(Messages.ProductAdded);
+            //    }
+
+            //}
 
 
 
@@ -102,5 +131,43 @@ namespace Business.Concrete
         {
             return new SuccessDataResult<Product>(_productDal.Get(p => p.ProductId == productId));
         }
+
+        [ValidationAspect(typeof(ProductValidator))]
+        public IResult Update(Product product)
+        {
+            throw new NotImplementedException();+
+        }
+
+        private IResult CheckIfProductCountOfCategoryCorrect(int categoryId)
+        {
+            var result = _productDal.GetAll(p => p.CategoryId == categoryId).Count;
+            if (result >= 15)
+            {
+                return new ErrorResult(Messages.ProductCountOfCategoryError);
+            }
+            return new SuccessResult();
+        }
+
+        private IResult CheckIfProductNameUsed(string productName)
+        {
+            var result = _productDal.GetAll(p => p.ProductName == productName).Any();
+            if (result)
+            {
+                return new ErrorResult(Messages.ProductNameAlreadyExists);
+            }
+            return new SuccessResult();
+        }
+
+        private IResult CheckIfCategoryLimitExceded()
+        {
+            var result = _categoryService.GetAll();
+            if (result.Data.Count>15)
+            {
+                return new ErrorResult(Messages.CategoryLimitExceded);
+            }
+            return new SuccessResult();
+        }
     }
+
+
 }

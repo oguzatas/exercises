@@ -50,6 +50,11 @@ namespace ConsoleUI.Concrete.InMemory
             return cars;
         }
 
+        public List<Car> GetAllByCategory(int CategoryId)
+        {
+            throw new NotImplementedException();
+        }
+
         public List<Car> GetAllById(int Id)
         {
             return cars.Where(p => p.Id == Id).ToList();

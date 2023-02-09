@@ -1,0 +1,27 @@
+﻿using Castle.DynamicProxy.Generators.Emitters.SimpleAST;
+using Core.Utilities.Results;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Core.Utilities.Business
+{
+    // it is an engine to 
+    public  class BusinessRules
+    {
+        public static IResult Run(params IResult[] logics)
+        {
+            foreach (var logic in logics)
+            {
+                if (!logic.Success)
+                {
+                    return logic;
+                }
+            }
+            return null;
+        }
+        
+    }
+}
