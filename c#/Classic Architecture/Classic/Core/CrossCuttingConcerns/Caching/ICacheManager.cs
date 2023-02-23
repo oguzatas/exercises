@@ -6,7 +6,17 @@ using System.Threading.Tasks;
 
 namespace Core.CrossCuttingConcerns.Caching
 {
-    internal interface ICacheManager
+    public interface ICacheManager
     {
+        T Get<T>(string key);
+        
+        void Add(string key, object value, int duration);
+        void Remove(string key);
+
+        bool IsAdd(string key);
+
+        void RemoveByPattern(string pattern);
+
+        public object Get(string key);
     }
 }
