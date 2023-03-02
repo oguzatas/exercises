@@ -11,7 +11,7 @@ import { Product } from 'src/app/models/product';
 export class ProductComponent implements OnInit {
 
   products: Product[] = [];
-
+  dataLoaded = false;
   ProductResponseModel: ProductResponseModel = {
     data: this.products,
     message: "",
@@ -27,7 +27,8 @@ export class ProductComponent implements OnInit {
   getProducts() {
     this.productService.getProducts().subscribe(response => {
       this.products = response.data;
-    }) // subscribe methodu asenkron çalışmayı sağlar
+      this.dataLoaded = true;
+    }) // subscribe methodu senkron çalışmayı sağlar
   }
 }
 
