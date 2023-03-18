@@ -78,7 +78,7 @@ class Blockchain:
                                   'amount': amount})
         previous_block = self.get_previous_block()
         return previous_block['index'] + 1
-    def add_node(self,adress):
+    def add_node(self,address):
         parsed_url = urlparse(address)
         self.nodes.add(parsed_url.nerloc)
         
@@ -86,11 +86,11 @@ class Blockchain:
         network = self.nodes
         longest_chain = None
         max_length = len(self.chain)
-        for nodes in network:
+        for node in network:
             response = requests.get(f'http://{node}/get_chain')
             if response.status_code == 200:
                 length = response.json()['length']
-                chains = response.json()['chain']
+                chain = response.json()['chain']
                 if length > max_length and self.is_chain_valid(chain):
                     max_length = length
                     longest_chain = chain
@@ -108,7 +108,7 @@ class Blockchain:
 app = Flask(__name__)
 
 #node adress
-node_adress = str(uuid4()).replace('-','')
+node_address = str(uuid4()).replace('-','')
 
 # Creating a Blockchain
 blockchain = Blockchain()
@@ -120,7 +120,7 @@ def mine_block():
     previous_proof = previous_block['proof']
     proof = blockchain.proof_of_work(previous_proof)
     previous_hash = blockchain.hash(previous_block)
-    transactions = blockchain.add_transaction(sender = node_address, receiver = 'root', amount = 5)
+    blockchain.add_transaction(sender = node_address, receiver = 'User1', amount = 5)
     block = blockchain.create_block(proof, previous_hash)
     response = {'message': 'Congratulations, you just mined a block!',
                 'index': block['index'],
@@ -183,4 +183,4 @@ def replace_chain():
 
 
 # Run
-app.run(host = '0.0.0.0', port = 5000)
+app.run(host = '0.0.0.0', port = 5001)
