@@ -1,0 +1,5 @@
+C:\Users\serqu\OneDrive\Masaüstü\workspace2\exercises\c#\EntityFramework\EntityFrameworkTutorials\EfCore.DbFirst\obj\Debug\net6.0\EfCore.DbFirst.csproj.AssemblyReference.cache
+C:\Users\serqu\OneDrive\Masaüstü\workspace2\exercises\c#\EntityFramework\EntityFrameworkTutorials\EfCore.DbFirst\obj\Debug\net6.0\EfCore.DbFirst.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\serqu\OneDrive\Masaüstü\workspace2\exercises\c#\EntityFramework\EntityFrameworkTutorials\EfCore.DbFirst\obj\Debug\net6.0\EfCore.DbFirst.AssemblyInfoInputs.cache
+C:\Users\serqu\OneDrive\Masaüstü\workspace2\exercises\c#\EntityFramework\EntityFrameworkTutorials\EfCore.DbFirst\obj\Debug\net6.0\EfCore.DbFirst.AssemblyInfo.cs
+C:\Users\serqu\OneDrive\Masaüstü\workspace2\exercises\c#\EntityFramework\EntityFrameworkTutorials\EfCore.DbFirst\obj\Debug\net6.0\EfCore.DbFirst.csproj.CoreCompileInputs.cache
